@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import nrew.Otovent.R;
+
 public class MainActivity extends AppCompatActivity {
     TextView signin;
     TextView signup;
