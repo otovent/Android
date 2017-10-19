@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     package="com.example.akaiona.user_timeline">
 
+=======
+    package="nrew.Otovent">
+<uses-permission android:name="android.permission.INTERNET"/>
+>>>>>>> Added volley denpendency and try to login
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
