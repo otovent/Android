@@ -18,6 +18,7 @@ import java.util.Map;
 
 import nrew.Otovent.R;
 import ws.wolfsoft.creative.API.Service;
+import ws.wolfsoft.creative.API.UserRequest;
 import ws.wolfsoft.creative.signin;
 
 /**
@@ -44,7 +45,33 @@ public class ServiceImpl implements Service{
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(callingClass, "Tes Sukses", Toast.LENGTH_SHORT).show();
+                Toast.makeText(callingClass, "Tes Failed", Toast.LENGTH_SHORT).show();
+                Log.i("Result", error.toString());
+                progressDialog.dismiss();
+            }
+        });
+        progressDialog.setIndeterminate(true);
+        progressDialog.setMessage("Please wait");
+        progressDialog.show();
+
+        queue.add(requestLogin);
+    }
+
+    @Override
+    public void addOrEditUser(String endpoint, Map<String,String> postBody, final Context callingClass, final ProgressDialog progressDialog) {
+        RequestQueue queue = Volley.newRequestQueue(callingClass);
+
+        JsonObjectRequest requestLogin = new JsonObjectRequest(callingClass.getString(R.string.ENV_HOST_BACKEND) + endpoint,
+                new JSONObject(postBody), new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                Toast.makeText(callingClass, response.toString(), Toast.LENGTH_SHORT).show();
+                progressDialog.dismiss();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(callingClass, "Tes Failed", Toast.LENGTH_SHORT).show();
                 Log.i("Result", error.toString());
                 progressDialog.dismiss();
             }
