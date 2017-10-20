@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Creative</string>
-    <string name="ENV_HOST_BACKEND">http://10.0.2.2:8080/</string>
+    <string name="ENV_HOST_BACKEND">https://otovent.herokuapp.com/</string>
 </resources>
