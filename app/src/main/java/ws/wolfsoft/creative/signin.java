@@ -1,5 +1,7 @@
 package ws.wolfsoft.creative;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -15,74 +17,50 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import nrew.Otovent.R;
+import ws.wolfsoft.creative.API.Impl.ServiceImpl;
+import ws.wolfsoft.creative.API.Service;
 
 public class signin extends AppCompatActivity {
-
+    private ProgressDialog progressDialog = null;
     TextView create;
-
+    TextView login;
     Typeface fonts1;
-
-
+    Service service;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
-
+        progressDialog = new ProgressDialog(signin.this,R.style.AppTheme);
+        service = new ServiceImpl();
         create = (TextView) findViewById(R.id.create);
-
+        login = (TextView) findViewById(R.id.signin1);
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            authToBackend("users/login");
-//            Intent it = new Intent(signin.this, signup.class);
-//            startActivity(it);
+                Intent it = new Intent(signin.this, signup.class);
+                startActivity(it);
             }
         });
-
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                service.authToBackend("users/login","aldi","wkadokaw",signin.this,progressDialog);
+            }
+        });
         fonts1 = Typeface.createFromAsset(signin.this.getAssets(),
                 "fonts/Lato-Regular.ttf");
-
         TextView t4 = (TextView) findViewById(R.id.create);
         t4.setTypeface(fonts1);
-
     }
 
-    private void authToBackend(String endpoint){
-        RequestQueue queue = Volley.newRequestQueue(this);
-        StringRequest sr = new StringRequest(Request.Method.POST,getString(R.string.ENV_HOST_BACKEND)+endpoint, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                Log.i("Result",response);
-                Toast.makeText(signin.this, "Wowwwwwwwwwwwwww", Toast.LENGTH_SHORT).show();
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.i("Result",error.toString());
-            }
-        }){
-            @Override
-            protected Map<String,String> getParams(){
-                Map<String,String> params = new HashMap<>();
-                params.put("username","aldi");
-                params.put("password","1234");
-                return params;
-            }
-
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                Map<String,String> params = new HashMap<>();
-                params.put("Content-Type","application/json");
-                return params;
-            }
-        };
-        queue.add(sr);
-    }
 }

@@ -5,8 +5,13 @@
 
 =======
     package="nrew.Otovent">
+<<<<<<< HEAD
 <uses-permission android:name="android.permission.INTERNET"/>
 >>>>>>> Added volley denpendency and try to login
+=======
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+>>>>>>> Success to get to endpoint API, make new Class called Service to collect methods to backend
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
