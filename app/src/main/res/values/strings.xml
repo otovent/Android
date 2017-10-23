@@ -1,15 +1,6 @@
 <resources>
-<<<<<<< HEAD
-    <string name="app_name">Lupa cara hapusnya :D</string>
     <string name="title_activity_scrolling__timeline">Scrolling_Timeline</string>
-
     <string name="action_settings">Settings</string>
-=======
     <string name="app_name">Creative</string>
-<<<<<<< HEAD
-    <string name="ENV_HOST_BACKEND">http://10.0.2.2:8080/</string>
->>>>>>> Added volley denpendency and try to login
-=======
     <string name="ENV_HOST_BACKEND">https://otovent.herokuapp.com/</string>
->>>>>>> Success to get to endpoint API, make new Class called Service to collect methods to backend
 </resources>
