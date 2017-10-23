@@ -3,30 +3,30 @@ package customfonts;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
 /**
- * Created by one on 3/12/15.
+ * Created by Miura on 10/22/2017.
  */
-public class MyTextView extends TextView {
 
-    public MyTextView(Context context, AttributeSet attrs, int defStyle) {
+public class MyTextView extends android.support.v7.widget.AppCompatTextView{
+
+    public MyTextView(Context context, AttributeSet attrs, int defStyle){
         super(context, attrs, defStyle);
         init();
     }
 
-    public MyTextView(Context context, AttributeSet attrs) {
+    public MyTextView(Context context, AttributeSet attrs){
         super(context, attrs);
         init();
     }
 
-    public MyTextView(Context context) {
+    public MyTextView(Context context){
         super(context);
         init();
     }
 
-    private void init() {
-        if (!isInEditMode()) {
+    private void init(){
+        if(!isInEditMode()){
             Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Lato-Light.ttf");
             setTypeface(tf);
         }

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/logo_back"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/png_back"
+            />
+
+        <ImageView
+            android:id="@+id/logo_search"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/png_search"
+            />
+
+        <ImageView
+            android:id="@+id/logo_promoted_timeline"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/png_promoted"
+            />
+
+        <ImageView
+            android:id="@+id/logo_friend"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/png_friend"
+            />
+
+        <ImageView
+            android:id="@+id/logo_notif"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/png_notif"
+            />
+
+        <ImageView
+            android:id="@+id/logo_user"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/png_user"
+            android:onClick="Profile"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#eff2f7">
+
+        <ImageView
+            android:id="@+id/logo_user_timeline"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/png_user"/>
+
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NAMA PENGGUNA"
+            android:textColor="#000000"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"/>
+
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAERAH DITEMPATI SEKARANG"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="50dp"
+            android:textSize="11dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="163dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/pic_timeline1" />
+        
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kuy kuy, ada pameran + Test Drive nih dari McLaren MP4 12C Super Sport Car. Cap Cuss Gas Ngengngiung "
+            android:layout_marginTop="222dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/logo_love"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="280dp"
+            android:background="@drawable/png_love" />
+
+        <ImageView
+            android:id="@+id/logo_comment"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="280dp"
+            android:background="@drawable/png_comment"/>
+
+        <ImageView
+            android:id="@+id/logo_maps"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="302dp"
+            android:layout_marginTop="280dp"
+            android:background="@drawable/png_maps"/>
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/logo_back"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/png_back"
+            />
+
+        <ImageView
+            android:id="@+id/logo_search"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/png_search"
+            />
+
+        <ImageView
+            android:id="@+id/logo_promoted_timeline"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/png_promoted"
+            />
+
+        <ImageView
+            android:id="@+id/logo_friend"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/png_friend"
+            />
+
+        <ImageView
+            android:id="@+id/logo_notif"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/png_notif"
+            />
+
+        <ImageView
+            android:id="@+id/logo_user"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/png_user"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/linearLayout"
+        android:background="#eff2f7"
+        >
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp">
+
+        </FrameLayout>
+
+
+
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="105dp"
+            android:layout_marginLeft="10dp"
+            android:text="Andrew N."
+            android:textSize="24dp"
+            android:textColor="#000"/>
+
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="10dp"
+            android:text="Mod Car Enthusiast."/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginTop="172dp">
+
+            <ImageView
+                android:id="@+id/logo_edit"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/png_pencil"/>
+
+            <customfonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="Racing" />
+
+            <customfonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="90dp"
+                android:text="Convertible"/>
+
+            <customfonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="200dp"
+                android:text="Coupe"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/pic_timeline1"
+            >
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/png_user">
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/png_user">
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/png_user">
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/png_user">
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/png_user">
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/png_user">
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/png_user">
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="450dp"
+        android:background="@drawable/png_plus">
+    </FrameLayout>
+
+
+</RelativeLayout>
