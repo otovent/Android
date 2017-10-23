@@ -9,10 +9,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.akaiona.user_timeline.R;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import nrew.Otovent.R;
 import ws.wolfsoft.creative.API.Impl.ServiceImpl;
 import ws.wolfsoft.creative.API.Service;
 
